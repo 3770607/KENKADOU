@@ -1,0 +1,321 @@
+html {
+    scroll-behavior: smooth;
+}
+
+
+header {
+    height: 60px;
+    background-color: black;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+}
+
+
+
+.fadeUp {
+    animation-name: fadeUpAnime;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes fadeUpAnime {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* スクロールをしたら出現する要素にはじめに透過0を指定　*/
+
+.element {
+    opacity: 0;
+}
+
+
+
+
+.title {
+    text-align: left;
+    font-size: 20px;
+    padding-left: 8px;
+}
+
+.hamburger {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    cursor: pointer;
+    z-index: 300;
+}
+
+.hamburger__line {
+    position: absolute;
+    width: 30px;
+    height: 1px;
+    right: 0;
+    background-color: pink;
+    transition: all 0.5s;
+}
+
+.hamburger__line--1 {
+    top: 1px;
+}
+
+.hamburger__line--2 {
+    top: 12px;
+}
+
+.hamburger__line--3 {
+    top: 23px;
+}
+
+/*ハンバーガーがクリックされたら*/
+.open .hamburger__line--1 {
+    transform: rotate(-45deg);
+    top: 11px;
+}
+
+.open .hamburger__line--2 {
+    opacity: 0;
+}
+
+.open .hamburger__line--3 {
+    transform: rotate(45deg);
+    top: 11px;
+}
+
+/* 
+  sp-nav(ナビ)
+  =================================== */
+.sp-nav {
+    position: fixed;
+    right: -100%;
+    /*ハンバーガーがクリックされる前はWindow右側に隠す*/
+    top: 0;
+    width: 40%;
+    /* 出てくるスライドメニューの幅 */
+    height: 30vh;
+    background-color: black;
+    transition: all 0.5s;
+    z-index: 200;
+    overflow-y: auto;
+    /* メニューが多くなったらスクロールできるように */
+}
+
+nav ul {
+    list-style: none;
+    padding-left: 5px;
+    padding-top: 40px;
+}
+
+.sp-nav a {
+    text-decoration: none;
+    color: pink;
+}
+
+/*ハンバーガーがクリックされたら右からスライド*/
+.open .sp-nav {
+    right: 0;
+}
+
+
+/* 
+  black-bg(ハンバーガーメニュー解除用bg)
+  =================================== */
+.black-bg {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 5;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s;
+    cursor: pointer;
+    z-index: 100;
+}
+
+/*ハンバーガーメニューが開いたら表示*/
+.open .black-bg {
+    opacity: 0.3;
+    visibility: visible;
+}
+
+body {
+    font-family: 'Climate Crisis', cursive;
+    font-family: 'Zen Maru Gothic', sans-serif;
+    color: pink;
+    background-color: royalblue;
+    /* text-transform: lowercase; */
+    text-align: center;
+    margin: auto;
+}
+
+.page1 {
+    padding: 20px;
+    margin: 40% 10% 40%;
+}
+
+.circle {
+    display: inline-block;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background: pink;
+    text-align: center;
+    line-height: 180px;
+    color: royalblue;
+    text-decoration: none;
+}
+
+.page2 a {
+    text-decoration: none;
+}
+
+.scroll {
+    display: flex;
+    overflow: scroll;
+}
+
+.page2 {
+    display: flex;
+    justify-content: space-around;
+}
+
+.scroll h3 {
+    margin-bottom: 0;
+}
+
+.stickarrow {
+    width: 30px;
+    height: 120px;
+    border-bottom: 3px solid pink;
+    border-right: 3px solid pink;
+    transform: skew(0deg, 45deg);
+    margin-right: 30px;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    display: inline-block;
+}
+
+#smoothplay {
+    margin-bottom: 100px;
+}
+
+
+img {
+    border: 5px solid #ffffff;
+    margin: 50px 50px 50px 50px;
+    width: 180px;
+    margin-bottom: auto;
+    flex: 1;
+}
+
+.scroll p {
+    position: relative;
+    padding: 0.25em 1em;
+    width: 100vw;
+    margin-left: 5%;
+    table-layout: fixed;
+    width: 80%;
+}
+
+.scroll p:before,
+.scroll p:after {
+    content: '';
+    width: 20px;
+    height: 30px;
+    position: absolute;
+    display: inline-block;
+}
+
+.scroll p:before {
+    border-left: solid 1px white;
+    border-top: solid 1px white;
+    top: 0;
+    left: 0;
+}
+
+.scroll p:after {
+    border-right: solid 1px white;
+    border-bottom: solid 1px white;
+    bottom: 0;
+    right: 0;
+}
+
+
+
+.howto {
+    margin-top: 100px;
+}
+
+.p1 {
+    text-align: left;
+    padding: 0% 10%;
+}
+
+.page4 {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+a {
+    color: aliceblue;
+}
+
+a:hover {
+    color: darkblue;
+}
+
+.submit {
+    background-color: pink;
+    color: royalblue;
+    border: none;
+    padding: 5px 10px;
+}
+
+.submit:hover {
+    background-color: rgb(253, 219, 225);
+    color: rgb(94, 128, 230);
+}
+
+
+footer {
+    width: 100%;
+    height: 100px;
+    background-color: black;
+    /* position: fixed; */
+    padding: 0;
+    margin: 0;
+
+}
+
+.footerul {
+    display: flex;
+    list-style: none;
+    padding-left: 10px;
+    align-items: center;
+    position: absolute;
+}
+
+li {
+    padding: 10px;
+    text-align: left;
+
+}
+
+footer p {
+    text-align: center;
+    padding-top: 70px;
+}
