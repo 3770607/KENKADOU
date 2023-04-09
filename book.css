@@ -1,0 +1,42 @@
+@charset "UTF-8";
+
+body {
+    background-color: royalblue;
+    color: #ffffff;
+    text-align: center;
+}
+
+h1 {
+    margin-top: 20%;
+}
+
+img {
+    border: 5px solid #ffffff;
+    margin-top: 100px;
+    width: 70%;
+    margin-bottom: auto;
+    flex: 1;
+}
+
+p {
+    text-align: justify;
+}
+
+.container {
+    display: flex;
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.item {
+    flex-basis: 90%;
+}
+
+a {
+    color: white;
+}
+
+a:hover {
+    color: darkblue;
+}
