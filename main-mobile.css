@@ -36,14 +36,9 @@ header {
     }
 }
 
-
-/* スクロールをしたら出現する要素にはじめに透過0を指定　*/
-
 .element {
     opacity: 0;
 }
-
-
 
 
 .title {
@@ -81,7 +76,6 @@ header {
     top: 23px;
 }
 
-/*ハンバーガーがクリックされたら*/
 .open .hamburger__line--1 {
     transform: rotate(-45deg);
     top: 11px;
@@ -96,22 +90,20 @@ header {
     top: 11px;
 }
 
-/* 
-  sp-nav(ナビ)
-  =================================== */
+/* sp-nav(ナビ)=================================== */
 .sp-nav {
     position: fixed;
     right: -100%;
-    /*ハンバーガーがクリックされる前はWindow右側に隠す*/
+    
     top: 0;
     width: 40%;
-    /* 出てくるスライドメニューの幅 */
+    
     height: 30vh;
     background-color: black;
     transition: all 0.5s;
     z-index: 200;
     overflow-y: auto;
-    /* メニューが多くなったらスクロールできるように */
+    
 }
 
 nav ul {
@@ -125,15 +117,13 @@ nav ul {
     color: pink;
 }
 
-/*ハンバーガーがクリックされたら右からスライド*/
+
 .open .sp-nav {
     right: 0;
 }
 
 
-/* 
-  black-bg(ハンバーガーメニュー解除用bg)
-  =================================== */
+/* black-bg(ハンバーガーメニュー解除用bg)=================================== */
 .black-bg {
     position: fixed;
     left: 0;
@@ -148,7 +138,7 @@ nav ul {
     z-index: 100;
 }
 
-/*ハンバーガーメニューが開いたら表示*/
+
 .open .black-bg {
     opacity: 0.3;
     visibility: visible;
